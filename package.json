@@ -1,0 +1,15 @@
+{
+  "name": "taper-data",
+  "version": "1.0.0",
+  "description": "API taper.io's data",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Scott Hensen",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^5.0.1"
+  }
+}
