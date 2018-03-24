@@ -78,13 +78,22 @@ function getResponse(error, result) {
     response = {
       statusCode: error.statusCode || 501,
       body: JSON.stringify(errorResp),
-      headers: { 'Content-Type': 'application/json'}
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': '*',
+      }
     }
   }
   else {
     response = {
       statusCode: 200,
-      body: JSON.stringify(result.Items)
+      body: JSON.stringify(result.Items),
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': '*',
+      }
     //body: JSON.stringify(result)        // might want this instead(?)
     }
   }
